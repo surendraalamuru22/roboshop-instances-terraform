@@ -71,7 +71,7 @@ resource "null_resource" "ansible-pull" {
     }
 
     inline = [
-      "dnf install ansible-core.x86_64",
+      "sudo dnf install ansible-core.x86_64",
       "ansible-pull -i localhost, -U https://github.com/surendraalamuru22/roboshop-ansible roboshop.yml -e env=${var.env} -e COMPONENT=${var.component_name} -e vault_token=${var.vault_token}"
     ]
   }
