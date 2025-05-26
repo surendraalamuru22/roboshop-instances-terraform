@@ -12,6 +12,7 @@ module "db-instances" {
   app_port = each.value.app_port
   domain_name = var.domain_name
   volume_size = each.value.volume_size
+  vault_token    = var.vault_token
 }
 
 module "app-instances" {
@@ -24,6 +25,7 @@ module "app-instances" {
   app_port = each.value.app_port
   domain_name = var.domain_name
   volume_size = each.value.volume_size
+  vault_token    = var.vault_token
 }
 
 module "web-instances" {
@@ -36,8 +38,9 @@ module "web-instances" {
   app_port = each.value.app_port
   domain_name = var.domain_name
   volume_size = each.value.volume_size
+  vault_token    = var.vault_token
 }
 
 #variable "vault_token" {
-#  default = "hvs.clZ0zqFWTNxzdl8kvvP0NnlL"
+#  default = "hvs.nZys8APfnymhUuR0vgbAmR8A"
 #}
