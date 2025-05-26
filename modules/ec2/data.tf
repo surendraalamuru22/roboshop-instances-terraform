@@ -9,6 +9,6 @@ data "aws_security_group" "sg" {
 }
 
 
-#data "vault_generic_secret" "ssh"{
-#  path = "infra-secrets/ssh"
-#}
+data "vault_generic_secret" "ssh"{
+  path = "infra-secrets/ssh"
+}
